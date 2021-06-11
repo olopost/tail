@@ -435,3 +435,8 @@ func (tail *Tail) sendLine(line string) bool {
 func (tail *Tail) Cleanup() {
 	watch.Cleanup(tail.Filename)
 }
+
+// get file
+func (tail *Tail) GetFile() *os.File {
+	return tail.file
+}
